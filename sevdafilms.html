@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVDAFILMS</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #searchBar {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1em;
+    border: 2px solid #4caf50;
+    border-radius: 25px;
+    outline: none;
+}
+
+#searchBar:focus {
+    border-color: #45a049;
+}
+
+        
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #4caf50;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
+
+        /* Styling for the links */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 30px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #4caf50;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Movie Gallery!</h1>
+    <p>Here are some interesting movies and series to watch:</p>
+    <div>
+        <input type="text" id="searchBar" placeholder="Search for a movie..." onkeyup="filterMovies()">
+    </div>
+    <ul>
+    
+
+        <li><a href="https://drive.google.com/file/d/1wWoC4LbZ7GtwEBhrwD-mpeNNMV7EDLp8/view?usp=drive_link" target="_blank">Ready or Not</a></li>
+        <li><a href="https://drive.google.com/file/d/1ptArKAlg0ordxTEMI-3nTCbGCPTQBSnM/view?t=1305" target="_blank">Barbie and the Secret Door</a></li>
+       <li><a href="https://drive.google.com/file/d/15ktyYPjYYYo5B3FcR_FSoYMjrXZwb9uC/view?t=19" target="_blank">Barbie in a Mermaid Tale</a></li>
+       <li><a href="https://drive.google.com/file/d/1BoZnP8ldjH9_hpR9BkMdXjUUw2S2sUQG/view?t=2"target= "_blank">Barbie and The Diamong Castle</a></li>
+      
+       <li><a href="https://drive.google.com/file/d/1-m4-L4_nLm8PHgSKy5Sv0VQhIIvgf-2E/view" target="_blank">Barbie Fairytopia Mermadia</a></li>
+    </ul>
+
+
+    <footer>
+        <p>© 2024 SEVDAFILMS. All rights owned by Kaki..</p>
+    </footer>
+    <script>
+        function filterMovies() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            const movieLinks = document.querySelectorAll('ul li');
+    
+            movieLinks.forEach((link) => {
+                const movieTitle = link.textContent.toLowerCase();
+                if (movieTitle.includes(searchInput)) {
+                    link.style.display = 'block'; // Show matching movies
+                } else {
+                    link.style.display = 'none'; // Hide non-matching movies
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
